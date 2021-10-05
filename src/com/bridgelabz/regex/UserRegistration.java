@@ -8,7 +8,7 @@ import utility.UtilValidation;
 public class UserRegistration {
 
 	public static void main(String[] args) {
-		String firstName, lastName, email;
+		String firstName, lastName, email, mobileNumber;
 
 		System.out.println("Welcome to User Registration program");
 		
@@ -32,6 +32,13 @@ public class UserRegistration {
 		
 		if(!UtilValidation.checkRegex(email, UtilRegex.email)) {
 			System.out.println("Please enter a email.");
+		}
+		
+		System.out.println("Enter mobile number : ");
+		mobileNumber = sc.nextLine();
+		
+		if(!UtilValidation.checkRegex(mobileNumber, UtilRegex.mobileNumber)) {
+			System.out.println("Please enter a valid mobile number.");
 		}
 	}
 }
